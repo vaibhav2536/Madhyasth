@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: Madhyasth
-    env: python
-    buildCommand: "./setup.sh"
-    startCommand: "./setup.sh"
-    pythonVersion: "3.11"
