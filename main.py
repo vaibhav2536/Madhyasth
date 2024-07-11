@@ -9,6 +9,26 @@ finger_tips = [8, 12, 16, 20]
 thumb_tip = 4
 index_finger_tip = 8
 middle_finger_tip = 12
+
+if not cap.isOpened():
+    print("Error: Could not open camera. Switching to fallback mode...")
+    # Use a fallback image or video
+    img = cv2.imread("images/fallback_image.png")
+else:
+    ret, img = cap.read()
+    if not ret:
+        print("Error: Failed to capture image from camera.")
+        img = None
+
+# Process the image or fallback content
+if img is not None:
+    # Your image processing logic here
+    cv2.imshow("Processed Image", img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+else:
+    print("Error: No image data available.")
+
 # reading image from opencv
 like_img = cv2.imread("images/like.jpg")
 like_img = cv2.resize(like_img, (200, 180))
