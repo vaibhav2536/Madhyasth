@@ -1,0 +1,17 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+
+# Ignore compiled Python filesx
+*.pyc
+__pycache__
+
+# Ignore environment-specific settings
+.env
+
+# Ignore OS generated files
+.DS_Store
+
+# Ignore virtual environment folder
+venv/
