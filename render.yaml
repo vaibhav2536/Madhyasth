@@ -2,6 +2,6 @@ services:
   - type: web
     name: Madhyasth
     env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python main.py"
+    buildCommand: "./setup.sh"
+    startCommand: "./setup.sh"
     pythonVersion: "3.11"
